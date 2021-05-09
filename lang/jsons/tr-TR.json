@@ -1,0 +1,15 @@
+{
+  "layouts": {
+    "partials": {
+      "navigationContent": {
+        "menuNames": ["Anasayfa", "Blog", "Portfolyo"]
+      }
+    }
+  },
+  "pages": {
+    "errors": {
+      "pageNotFound": "404 Hatası Aradığınız Hedef Bulunamadı",
+      "otherError": "Bir hata oluştu"
+    }
+  }
+}

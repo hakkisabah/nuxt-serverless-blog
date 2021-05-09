@@ -1,0 +1,15 @@
+{
+  "layouts": {
+    "partials": {
+      "navigationContent": {
+        "menuNames": ["Main", "Blog", "Portfolio"]
+      }
+    }
+  },
+  "pages": {
+    "errors": {
+      "pageNotFound": "404 Not Found",
+      "otherError": "An error occurred"
+    }
+  }
+}
