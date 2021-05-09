@@ -7,10 +7,10 @@
 <script>
 import Player from '~/components/Player'
 export default {
+  name: 'DefaultRight',
   components: {
     Player,
   },
-  name: 'DefaultRight',
 }
 </script>
 

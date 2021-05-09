@@ -7,10 +7,10 @@
 <script>
 import Socialcard from '~/components/Socialcard'
 export default {
+  name: 'DefaultLeft',
   components: {
     Socialcard,
   },
-  name: 'DefaultLeft',
 }
 </script>
 

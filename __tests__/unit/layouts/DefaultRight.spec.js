@@ -31,7 +31,7 @@ describe('DefaultLeft.vue', () => {
   })
 
   it('shoud have a socialcard component', () => {
-    const isSocialCard = wrapper.vm.$options.components['Socialcard']
+    const isSocialCard = wrapper.vm.$options.components.Socialcard
     expect(isSocialCard).toBeTruthy()
   })
 })

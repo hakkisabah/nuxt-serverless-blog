@@ -8,7 +8,7 @@ import DefaultLeft from '@/layouts/partials/DefaultLeft'
 
 // Utilities
 import { createLocalVue, mount } from '@vue/test-utils'
-import { beforeEach, describe, it } from '@jest/globals'
+import { describe, it } from '@jest/globals'
 
 describe('DefaultLeft.vue', () => {
   const localVue = createLocalVue()
