@@ -12,13 +12,13 @@ import { describe, it } from '@jest/globals'
 
 describe('DefaultLeft.vue', () => {
   const localVue = createLocalVue()
-  let vuetify = new Vuetify()
+  const vuetify = new Vuetify()
   const wrapper = mount(DefaultLeft, {
     localVue,
     vuetify,
   })
 
-  it('should have a v-card', async () => {
+  it('should have a v-card', () => {
     // With jest we can create snapshot files of the HTML output
     expect(wrapper.html()).toMatchSnapshot()
 
@@ -28,7 +28,6 @@ describe('DefaultLeft.vue', () => {
 
     const defaultLeftCardImg = wrapper.find('.v-card__actions a')
     expect(defaultLeftCardImg.attributes().href).toBeDefined()
-
   })
   it('should have corrected properties', () => {
     const socialLinks = wrapper.vm.$data.socialLinks

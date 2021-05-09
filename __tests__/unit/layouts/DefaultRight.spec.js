@@ -32,6 +32,6 @@ describe('DefaultRight.vue', () => {
     expect(defaultRightSheet.exists()).toBe(true)
 
     // ITS CHANGE WHILE DEVELOPING
-    expect(defaultRightSheet.text()).toBe("Right")
+    expect(defaultRightSheet.text()).toBe('Right')
   })
 })

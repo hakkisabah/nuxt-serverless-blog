@@ -12,12 +12,7 @@ import DefaultCenter from '@/layouts/partials/DefaultCenter'
 import DefaultRight from '@/layouts/partials/DefaultRight'
 
 // Utilities
-import {
-  createLocalVue,
-  mount,
-  RouterLinkStub,
-  shallowMount,
-} from '@vue/test-utils'
+import { createLocalVue, RouterLinkStub, shallowMount } from '@vue/test-utils'
 import { beforeEach, describe, it } from '@jest/globals'
 
 describe('default.vue', () => {
