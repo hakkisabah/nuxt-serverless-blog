@@ -11,29 +11,25 @@ import Timeline from '@/components/Timeline'
 
 // Utilities
 import { createLocalVue, mount } from '@vue/test-utils'
-import { beforeEach, describe, it } from '@jest/globals'
+import { describe, it } from '@jest/globals'
 
 describe('index.vue', () => {
   const localVue = createLocalVue()
-  let vuetify
-
-  beforeEach(() => {
-    vuetify = new Vuetify()
+  const vuetify = new Vuetify()
+  const wrapper = mount(indexPage, {
+    localVue,
+    vuetify,
+    stubs: {
+      nuxt: true,
+      // Any other component that you want stubbed
+    },
+    components: {
+      LazyTimeline: Timeline,
+    },
   })
 
-  it('should have a v-sheet', () => {
-    const wrapper = mount(indexPage, {
-      localVue,
-      vuetify,
-      stubs: {
-        nuxt: true,
-        // Any other component that you want stubbed
-      },
-      components: {
-        LazyTimeline: Timeline,
-      },
-    })
-
-    // TODO
+  it('should have a LazyTimeline', () => {
+    const isLazyTimeline = wrapper.vm.$options.components.LazyTimeline
+    expect(isLazyTimeline).toBeTruthy()
   })
 })
