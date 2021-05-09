@@ -33,7 +33,6 @@ describe('error.vue', () => {
 
   it('should have corrected error page', () => {
     // With jest we can create snapshot files of the HTML output
-    expect(wrapper.html()).toMatchSnapshot()
 
     const errorProp = wrapper.vm.$props.error
     expect(errorProp.default).toBeNull()

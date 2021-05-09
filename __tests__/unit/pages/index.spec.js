@@ -33,7 +33,6 @@ describe('index.vue', () => {
         LazyTimeline: Timeline,
       },
     })
-    expect(wrapper.html()).toMatchSnapshot()
 
     // TODO
   })

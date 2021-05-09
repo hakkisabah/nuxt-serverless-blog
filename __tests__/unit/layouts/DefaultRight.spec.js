@@ -20,7 +20,6 @@ describe('DefaultLeft.vue', () => {
 
   it('should have a v-card', () => {
     // With jest we can create snapshot files of the HTML output
-    expect(wrapper.html()).toMatchSnapshot()
 
     const defaultLeft = wrapper.find('.v-card')
     expect(defaultLeft.exists()).toBe(true)

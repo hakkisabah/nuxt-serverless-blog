@@ -33,7 +33,6 @@ describe('DefaultNav.vue', () => {
 
   it('should have corrected html', () => {
     // With jest we can create snapshot files of the HTML output
-    expect(wrapper.html()).toMatchSnapshot()
 
     const title = wrapper.find('.v-toolbar__title')
     expect(title.exists()).toBe(true)

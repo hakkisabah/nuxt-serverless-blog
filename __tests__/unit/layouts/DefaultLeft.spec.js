@@ -21,7 +21,6 @@ describe('DefaultLeft.vue', () => {
     })
 
     // With jest we can create snapshot files of the HTML output
-    expect(wrapper.html()).toMatchSnapshot()
 
     const defaultRightSheet = wrapper.find('.v-sheet')
 

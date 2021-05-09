@@ -24,7 +24,6 @@ describe('Timeline.vue', () => {
   })
   it('should have a timeline', () => {
     // With jest we can create snapshot files of the HTML output
-    expect(wrapper.html()).toMatchSnapshot()
 
     const timeline = wrapper.findComponent(Timeline)
     expect(timeline.exists()).toBe(true)

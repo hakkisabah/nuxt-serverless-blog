@@ -44,7 +44,6 @@ describe('default.vue', () => {
     // We can check first loading..
     if (wrapper.isLoad === true) {
       // With jest we can create snapshot files of the HTML output
-      expect(wrapper.html()).toMatchSnapshot()
 
       const nav = wrapper.findComponent(DefaultNav)
       expect(nav.exists()).toBe(true)
