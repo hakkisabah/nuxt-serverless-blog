@@ -8,30 +8,30 @@ import DefaultRight from '@/layouts/partials/DefaultRight'
 
 // Utilities
 import { createLocalVue, mount } from '@vue/test-utils'
-import { beforeEach, describe, it } from '@jest/globals'
+import { describe, it } from '@jest/globals'
 
-describe('DefaultRight.vue', () => {
+describe('DefaultLeft.vue', () => {
   const localVue = createLocalVue()
-  let vuetify
-
-  beforeEach(() => {
-    vuetify = new Vuetify()
+  const vuetify = new Vuetify()
+  const wrapper = mount(DefaultRight, {
+    localVue,
+    vuetify,
   })
 
-  it('should have a v-sheet', () => {
-    const wrapper = mount(DefaultRight, {
-      localVue,
-      vuetify,
-    })
-
+  it('should have a v-card', () => {
     // With jest we can create snapshot files of the HTML output
     expect(wrapper.html()).toMatchSnapshot()
 
-    const defaultRightSheet = wrapper.find('.v-sheet')
+    const defaultLeft = wrapper.find('.v-card')
+    expect(defaultLeft.exists()).toBe(true)
+    expect(defaultLeft.text()).toBe('')
 
-    expect(defaultRightSheet.exists()).toBe(true)
+    const defaultLeftCardImg = wrapper.find('.v-card__actions a')
+    expect(defaultLeftCardImg.attributes().href).toBeDefined()
+  })
 
-    // ITS CHANGE WHILE DEVELOPING
-    expect(defaultRightSheet.text()).toBe('Right')
+  it('shoud have a socialcard component', () => {
+    const isSocialCard = wrapper.vm.$options.components['Socialcard']
+    expect(isSocialCard).toBeTruthy()
   })
 })

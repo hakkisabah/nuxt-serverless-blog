@@ -1,12 +1,16 @@
 <template>
   <v-col cols="12" sm="2">
-    <v-sheet rounded="lg" min-height="268"> Right </v-sheet>
+    <Socialcard></Socialcard>
   </v-col>
 </template>
 
 <script>
+import Socialcard from '~/components/Socialcard'
 export default {
-  name: 'DefaultRight',
+  components: {
+    Socialcard,
+  },
+  name: 'DefaultLeft',
 }
 </script>
 
