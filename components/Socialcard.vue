@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-img :src="`${socialCardImage}`" height="200px">
+    <v-img :src="getSocialLink('cardimage')" height="200px">
       <span class="headline white--text pl-4 pt-4 d-inline-block"></span>
     </v-img>
 
@@ -47,7 +47,6 @@ export default {
           color: 'red lighten-3',
         },
       ],
-      socialCardImage: 'https://picsum.photos/200/300?image=550',
     }
   },
   methods: {

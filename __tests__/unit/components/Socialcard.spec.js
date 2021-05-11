@@ -19,6 +19,7 @@ describe('Socialcard.vue', () => {
   })
   it('should have corrected properties', () => {
     const socialLinks = wrapper.vm.$data.socialLinks
+    expect(socialLinks).toHaveProperty('cardimage')
     expect(socialLinks).toHaveProperty('twitter')
     expect(socialLinks).toHaveProperty('linkedin')
     expect(socialLinks).toHaveProperty('instagram')
@@ -32,7 +33,5 @@ describe('Socialcard.vue', () => {
         { color: 'red lighten-3', icon: 'mdi-instagram' },
       ])
     )
-    const socialCardImage = wrapper.vm.$data.socialCardImage
-    expect(socialCardImage).toBeDefined()
   })
 })

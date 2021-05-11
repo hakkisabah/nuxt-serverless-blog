@@ -3,7 +3,7 @@
     <v-responsive rounded="rounded" :aspect-ratio="16 / 9">
       <iframe
         style="border-radius: 5px"
-        src="https://open.spotify.com/embed/playlist/4CO4Yogfwreg7MkmIKAhUd?si=5ca69c50e37f4a8f"
+        :src="getPlayerLink"
         height="100%"
         width="100%"
         frameborder="0"
@@ -17,6 +17,22 @@
 <script>
 export default {
   name: 'Player',
+  props: {
+    selectedPlaylist: {
+      default: 'spotify',
+      type: String,
+    },
+  },
+  data() {
+    return {
+      playlistLinks: require('../mocks/player.json'),
+    }
+  },
+  computed: {
+    getPlayerLink() {
+      return this.playlistLinks[this.selectedPlaylist]
+    },
+  },
 }
 </script>
 
