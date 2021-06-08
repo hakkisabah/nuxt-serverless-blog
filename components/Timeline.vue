@@ -14,7 +14,7 @@
         <v-subheader class="text-decoration-underline">{{
           blog.createdAt
         }}</v-subheader>
-        <v-card-text>{{ blog.content }}</v-card-text>
+        <v-card-text class="lengthDotter">{{ blog.content }}</v-card-text>
       </v-card>
     </v-timeline-item>
   </v-timeline>

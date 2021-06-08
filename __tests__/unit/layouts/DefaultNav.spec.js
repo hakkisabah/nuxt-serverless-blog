@@ -23,6 +23,7 @@ describe('DefaultNav.vue', () => {
       $i18n: (locale) => locale,
       menuLinks: menuNames,
       $colorMode: (param) => param,
+      navigationLinkResolver: (to) => to,
     },
     stubs: {
       NuxtLink: true,

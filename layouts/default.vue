@@ -45,3 +45,10 @@ export default {
   },
 }
 </script>
+<style>
+.lengthDotter {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+</style>

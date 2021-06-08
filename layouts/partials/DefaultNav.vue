@@ -42,6 +42,9 @@
             :to="`${navigationLinkResolver(menuLinks[index])}`"
             active-class
           >
+            <v-icon v-if="backBlogIcon && index == 1" medium
+              >mdi-arrow-left</v-icon
+            >
             {{ name }}
           </v-tab>
         </v-tabs>
@@ -55,12 +58,12 @@ export default {
   name: 'DefaultNav',
   data() {
     return {
+      backBlogIcon: false,
       isSearch: false,
       navigationContent: this.$t(
         'layouts.partials.navigationContent.menuNames'
       ),
       menuLinks: require('@/lang/jsons/links.json').menuNames,
-      currentAndDetectedLang: this.$i18n.locale,
       loading: false,
       items: [],
       search: null,
@@ -74,20 +77,23 @@ export default {
     },
   },
   watch: {
+    '$nuxt.$route': {
+      handler(to, from) {
+        if (to.params.blogslug) {
+          this.backBlogIcon = true
+          // eslint-disable-next-line
+          console.log(to.params.blogslug)
+        } else {
+          this.backBlogIcon = false
+        }
+      },
+      deep: true,
+    },
     search(val) {
       val && val !== this.select && this.querySelections(val)
     },
   },
   methods: {
-    navigationLinkResolver(to) {
-      if (to !== '/') {
-        return this.currentAndDetectedLang === 'en'
-          ? '/' + to
-          : '/' + this.currentAndDetectedLang + '/' + to
-      } else {
-        return '/'
-      }
-    },
     toggleDarkMode() {
       if (this.$colorMode.preference !== 'dark') {
         this.$colorMode.preference = 'dark'

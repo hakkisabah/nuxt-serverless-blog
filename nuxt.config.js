@@ -18,7 +18,10 @@ export default {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [{ src: '~/plugins/i18n.js', ssr: true }],
+  plugins: [
+    { src: '~/plugins/i18n.js', ssr: true },
+    { src: '~/plugins/linkresolver.js' },
+  ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
