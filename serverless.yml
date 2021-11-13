@@ -1,0 +1,24 @@
+service: nuxt-serverless-blog
+provider:
+  name: aws
+  runtime: nodejs14.x
+  memorySize: 128
+  timeout: 10
+  stage: api
+  region: eu-central-1
+  lambdaHashingVersion: 20201221
+functions:
+  api:
+    handler: lambda.nuxt
+    events:
+      - http: ANY /
+      - http: ANY /{proxy+}
+    environment:
+      domain: ${self:custom.secrets.domain}
+      TITLE_TEMPLATE: ${self:custom.secrets.TITLE_TEMPLATE}
+      TITLE: ${self:custom.secrets.TITLE}
+custom:
+  secrets: ${file(secretenv.json)}
+  apigwBinary :
+    types :
+      - '*/*'

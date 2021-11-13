@@ -1,9 +1,13 @@
 export const state = () => ({
-  blogs: {},
+  blogs: [],
+  timelineBlogLimit: 4,
 })
 export const getters = {
   getBlogs(state) {
     return state.blogs
+  },
+  getTimeLineLimit(state) {
+    return state.timelineBlogLimit
   },
 }
 export const mutations = {
@@ -17,9 +21,7 @@ export const actions = {
     context.commit('loadBlogs', data)
   },
   getBlog(context, slug) {
-    const key = Object.keys(context.state.blogs).find(
-      (key) => context.state.blogs[key].slug === slug
-    )
-    return context.state.blogs[key]
+    const findedBlog = context.state.blogs.find((blog) => blog.slug === slug)
+    return findedBlog
   },
 }

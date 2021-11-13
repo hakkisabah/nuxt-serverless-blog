@@ -1,7 +1,8 @@
-import colors from 'vuetify/es5/util/colors'
-require('dotenv').config()
+// eslint-disable-next-line nuxt/no-cjs-in-config
+const colors = require('vuetify/es5/util/colors').default
 
-export default {
+// eslint-disable-next-line nuxt/no-cjs-in-config
+module.exports = {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: '%s - ' + process.env.TITLE_TEMPLATE,
@@ -93,12 +94,21 @@ export default {
     classSuffix: '-mode',
     storageKey: 'nuxt-color-mode',
   },
-
-  // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
   loading: {
     color: 'white',
     height: '5px',
     continuous: true,
   },
+  // Build Configuration: https://go.nuxtjs.dev/config-build
+  build: {
+    publicPath: `https://${process.env.domain}/_nuxt/`, // <= https must be over here
+  },
+  // srcDir: 'client/',
+  performance: {
+    gzip: false,
+  },
+  router: {
+    base: `/`,
+  },
+  dev: false,
 }

@@ -2,7 +2,7 @@
   <v-app id="myblog" :dark="$colorMode.preference === 'dark'">
     <div v-if="isLoad">
       <DefaultNav></DefaultNav>
-      <v-main :dark="$colorMode.preference === 'dark'">
+      <v-main>
         <v-container fluid>
           <v-row>
             <DefaultLeft></DefaultLeft>

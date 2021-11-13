@@ -4,4 +4,9 @@
               Opera Favorilere bak Front End , CSS ve JavaScript Klasörlerine
             </li>
             <li>Ayrıca favorilerdeki D3.js klasoründeki linke de göz at</li>
-          </ul>
+            <li>
+            ÖNEMLİ !
+            Lambda ve APIGATEWAY sadece https destekliyor http girişlerinde hata alınmaması için
+            en optimum çözüm domain panelinden adresi https uzantılı olana yönlendirme yapmak.
+            </li>
+  </ul>

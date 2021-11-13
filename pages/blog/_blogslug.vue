@@ -1,6 +1,6 @@
 <template>
   <v-app
-    ><h1>{{ /*blogData*/ }}</h1>
+    ><h1>{{ blogData }}</h1>
   </v-app>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <v-app :dark="$vuetify.theme.dark">
+  <v-app>
     <v-card v-for="(blog, index) in blogs" :key="index" class="mb-3">
       <v-img class="white--text align-end" height="200px" :src="blog.img">
         <v-card-title>{{ blog.title }}</v-card-title>

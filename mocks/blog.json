@@ -1,5 +1,6 @@
-{
-  "0": {
+[
+  {
+    "id": 0,
     "title": "My blog here",
     "titleIcon": "mdi-star",
     "slug": "my-blog-here",
@@ -7,7 +8,8 @@
     "createdAt": "22/10/2020",
     "img": "https://cdn.vuetifyjs.com/images/cards/docks.jpg"
   },
-  "1": {
+  {
+    "id": 1,
     "title": "Different blog here",
     "titleIcon": "mdi-buffer",
     "slug": "different-blog-here",
@@ -15,7 +17,8 @@
     "createdAt": "20/10/2020",
     "img": "https://cdn.vuetifyjs.com/images/cards/docks.jpg"
   },
-  "2": {
+  {
+    "id": 2,
     "title": "My blog here",
     "titleIcon": "mdi-star",
     "slug": "my-blog-here",
@@ -23,15 +26,8 @@
     "createdAt": "22/10/2020",
     "img": "https://cdn.vuetifyjs.com/images/cards/docks.jpg"
   },
-  "3": {
-    "title": "Different blog here",
-    "titleIcon": "mdi-buffer",
-    "slug": "different-blog-here",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi blanditiis dicta esse itaque porro voluptatum. Accusantium amet consectetur",
-    "createdAt": "20/10/2020",
-    "img": "https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-  },
-  "4": {
+  {
+    "id": 3,
     "title": "My blog here",
     "titleIcon": "mdi-star",
     "slug": "my-blog-here",
@@ -39,7 +35,8 @@
     "createdAt": "22/10/2020",
     "img": "https://cdn.vuetifyjs.com/images/cards/docks.jpg"
   },
-  "5": {
+  {
+    "id": 4,
     "title": "Different blog here",
     "titleIcon": "mdi-buffer",
     "slug": "different-blog-here",
@@ -47,7 +44,8 @@
     "createdAt": "20/10/2020",
     "img": "https://cdn.vuetifyjs.com/images/cards/docks.jpg"
   },
-  "6": {
+  {
+    "id": 5,
     "title": "My blog here",
     "titleIcon": "mdi-star",
     "slug": "my-blog-here",
@@ -55,12 +53,31 @@
     "createdAt": "22/10/2020",
     "img": "https://cdn.vuetifyjs.com/images/cards/docks.jpg"
   },
-  "7": {
+  {
+    "id": 6,
+    "title": "My blog here",
+    "titleIcon": "mdi-star",
+    "slug": "my-blog-here",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi blanditiis dicta esse itaque porro voluptatum. Accusantium amet consectetur deleniti dolorum laborum maxime minus nostrum praesentium! Autem dolores qui ullam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi blanditiis dicta esse itaque porro voluptatum. Accusantium amet consectetur deleniti dolorum laborum maxime minus nostrum praesentium! Autem dolores qui ullam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi blanditiis dicta esse itaque porro voluptatum. Accusantium amet consectetur deleniti dolorum laborum maxime minus nostrum praesentium! Autem dolores qui ullam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi blanditiis dicta esse itaque porro voluptatum. Accusantium amet consectetur deleniti dolorum laborum maxime minus nostrum praesentium! Autem dolores qui ullam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi blanditiis dicta esse itaque porro voluptatum. Accusantium amet consectetur deleniti dolorum laborum maxime minus nostrum praesentium! Autem dolores qui ullam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi blanditiis dicta esse itaque porro voluptatum. Accusantium amet consectetur deleniti dolorum laborum maxime minus nostrum praesentium! Autem dolores qui ullam.",
+    "createdAt": "22/10/2020",
+    "img": "https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+  },
+  {
+    "id": 7,
     "title": "Different blog here",
     "titleIcon": "mdi-buffer",
     "slug": "different-blog-here",
     "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi blanditiis dicta esse itaque porro voluptatum. Accusantium amet consectetur",
     "createdAt": "20/10/2020",
+    "img": "https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+  },
+  {
+    "id": 8,
+    "title": "My blog here",
+    "titleIcon": "mdi-star",
+    "slug": "my-blog-here",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi blanditiis dicta esse itaque porro voluptatum. Accusantium amet consectetur deleniti dolorum laborum maxime minus nostrum praesentium! Autem dolores qui ullam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi blanditiis dicta esse itaque porro voluptatum. Accusantium amet consectetur deleniti dolorum laborum maxime minus nostrum praesentium! Autem dolores qui ullam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi blanditiis dicta esse itaque porro voluptatum. Accusantium amet consectetur deleniti dolorum laborum maxime minus nostrum praesentium! Autem dolores qui ullam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi blanditiis dicta esse itaque porro voluptatum. Accusantium amet consectetur deleniti dolorum laborum maxime minus nostrum praesentium! Autem dolores qui ullam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi blanditiis dicta esse itaque porro voluptatum. Accusantium amet consectetur deleniti dolorum laborum maxime minus nostrum praesentium! Autem dolores qui ullam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi blanditiis dicta esse itaque porro voluptatum. Accusantium amet consectetur deleniti dolorum laborum maxime minus nostrum praesentium! Autem dolores qui ullam.",
+    "createdAt": "22/10/2020",
     "img": "https://cdn.vuetifyjs.com/images/cards/docks.jpg"
   }
-}
+]

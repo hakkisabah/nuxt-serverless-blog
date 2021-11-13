@@ -7,7 +7,7 @@ import {
   MODULE_NAME,
   STRATEGIES,
   strategy,
-} from './options'
+} from './options' // << options will be created after build in .nuxt/nuxt-i18n/ path..
 
 export const nuxtI18nSeo = function () {
   if (

@@ -1,5 +1,8 @@
 <template>
-  <v-timeline :dense="$vuetify.breakpoint.smAndDown">
+  <v-timeline
+    :dark="$colorMode.preference !== 'dark'"
+    :dense="$vuetify.breakpoint.smAndDown"
+  >
     <v-timeline-item
       v-for="(blog, index) in blogs"
       :key="index"
@@ -10,10 +13,10 @@
         <hr />
       </template>
       <v-card class="elevation-2">
-        <v-card-title class="headline"> {{ blog.title }} </v-card-title>
-        <v-subheader class="text-decoration-underline">{{
-          blog.createdAt
-        }}</v-subheader>
+        <v-card-title class="headline"> {{ blog.title }}</v-card-title>
+        <v-subheader class="text-decoration-underline"
+          >{{ blog.createdAt }}
+        </v-subheader>
         <v-card-text class="lengthDotter">{{ blog.content }}</v-card-text>
       </v-card>
     </v-timeline-item>
@@ -27,9 +30,16 @@ export default {
       blogs: [],
     }
   },
-  async created() {
-    const data = await require('../mocks/blog.json')
-    this.blogs = data
+  beforeCreate() {
+    this.$store.dispatch('nuxtServerInit')
+  },
+  created() {
+    const limit = this.$store.getters.getTimeLineLimit
+    this.blogs = this.$store.getters.getBlogs.filter((blog, index) => {
+      if (index < limit) {
+        return blog
+      }
+    })
   },
 }
 </script>

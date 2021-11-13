@@ -78,11 +78,10 @@ export default {
   },
   watch: {
     '$nuxt.$route': {
+      // Check navigation blog text for back icon
       handler(to, from) {
         if (to.params.blogslug) {
           this.backBlogIcon = true
-          // eslint-disable-next-line
-          console.log(to.params.blogslug)
         } else {
           this.backBlogIcon = false
         }
