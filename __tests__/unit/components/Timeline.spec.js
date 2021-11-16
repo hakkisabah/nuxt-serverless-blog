@@ -30,8 +30,12 @@ describe('Timeline.vue', () => {
       $colorMode: (param) => param,
     },
   })
-  it('should have a timeline', () => {
+  it('should have a timeline component', () => {
     const timeline = wrapper.findComponent(Timeline)
     expect(timeline.exists()).toBe(true)
+  })
+  it('should have blogs', async () => {
+    const blogs = await wrapper.vm.$store.getters.getBlogs
+    expect(Array.isArray(blogs)).toBe(true)
   })
 })
