@@ -1,6 +1,8 @@
 <template>
-  <v-app
-    ><h1>{{ blogData }}</h1>
+  <v-app>
+    <v-container>
+      <h1>{{ blogData }}</h1>
+    </v-container>
   </v-app>
 </template>
 
@@ -19,6 +21,9 @@ export default {
   },
   async created() {
     this.blogData = await this.$store.dispatch('getBlog', this.blogslug)
+    if (!this.blogData) {
+      return this.$router.push('/error')
+    }
   },
 }
 </script>

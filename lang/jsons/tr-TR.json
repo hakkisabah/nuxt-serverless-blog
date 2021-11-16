@@ -11,5 +11,8 @@
       "pageNotFound": "404 Hatası Aradığınız Hedef Bulunamadı",
       "otherError": "Bir hata oluştu"
     }
+  },
+  "linkNames": {
+    "home": "Ana Sayfa"
   }
 }
