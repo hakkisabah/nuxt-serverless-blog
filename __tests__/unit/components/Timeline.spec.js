@@ -27,6 +27,7 @@ describe('Timeline.vue', () => {
     vuetify,
     store,
     mocks: {
+      navigationLinkResolver: (param) => param,
       $colorMode: (param) => param,
     },
   })

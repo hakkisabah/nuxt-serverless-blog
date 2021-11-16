@@ -13,7 +13,13 @@
         <hr />
       </template>
       <v-card class="elevation-2">
-        <v-card-title class="headline"> {{ blog.title }}</v-card-title>
+        <v-card-title class="headline">
+          <a
+            class="text-decoration-none"
+            :href="`${navigationLinkResolver('blog/' + blog.slug)}`"
+            >{{ blog.title }}
+          </a>
+        </v-card-title>
         <v-subheader class="text-decoration-underline"
           >{{ blog.createdAt }}
         </v-subheader>

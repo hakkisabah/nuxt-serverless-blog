@@ -11,7 +11,7 @@
   {
     "id": 1,
     "title": "Different blog here",
-    "titleIcon": "mdi-buffer",
+    "titleIcon": "mdi-newspaper",
     "slug": "different-blog-here",
     "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi blanditiis dicta esse itaque porro voluptatum. Accusantium amet consectetur",
     "createdAt": "20/10/2020",
