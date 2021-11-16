@@ -7,13 +7,13 @@ import Vuetify from 'vuetify'
 import Socialcard from '@/components/Socialcard'
 
 // Utilities
-import { createLocalVue, mount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import { describe, it } from '@jest/globals'
 
 describe('Socialcard.vue', () => {
   const localVue = createLocalVue()
   const vuetify = new Vuetify()
-  const wrapper = mount(Socialcard, {
+  const wrapper = shallowMount(Socialcard, {
     localVue,
     vuetify,
   })

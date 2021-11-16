@@ -7,24 +7,21 @@ import Vuetify from 'vuetify'
 import indexPage from '@/pages/index'
 
 // Components
-import Timeline from '@/components/Timeline'
+import LazyTimeline from '@/components/Timeline'
 
 // Utilities
-import { createLocalVue, mount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import { describe, it } from '@jest/globals'
 
 describe('index.vue', () => {
   const localVue = createLocalVue()
   const vuetify = new Vuetify()
-  const wrapper = mount(indexPage, {
+  const wrapper = shallowMount(indexPage, {
     localVue,
     vuetify,
-    stubs: {
-      nuxt: true,
-      // Any other component that you want stubbed
-    },
+    mocks: { $colorMode: (param) => param },
     components: {
-      LazyTimeline: Timeline,
+      LazyTimeline,
     },
   })
 

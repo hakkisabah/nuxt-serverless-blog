@@ -10,7 +10,8 @@
             }
           }
         ]
-      ]
+      ],
+      "plugins": ["dynamic-import-node"]
     }
   }
 }

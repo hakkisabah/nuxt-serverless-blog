@@ -25,6 +25,7 @@
 
 <script>
 export default {
+  name: 'Timeline',
   data() {
     return {
       blogs: [],
@@ -43,5 +44,3 @@ export default {
   },
 }
 </script>
-
-<style scoped></style>

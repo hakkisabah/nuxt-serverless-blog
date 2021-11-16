@@ -1,5 +1,8 @@
 // __tests__/unit/components/Timeline.spec.js
 
+// Store
+import Vuex from 'vuex'
+
 // Libraries
 import Vuetify from 'vuetify'
 
@@ -7,24 +10,27 @@ import Vuetify from 'vuetify'
 import Timeline from '@/components/Timeline'
 
 // Utilities
-import { createLocalVue, mount } from '@vue/test-utils'
-import { describe, it } from '@jest/globals'
+import { createLocalVue, mount, shallowMount } from '@vue/test-utils'
+import { describe, it, jest } from '@jest/globals'
+import * as blogStore from '~/store'
 
 describe('Timeline.vue', () => {
   const localVue = createLocalVue()
+  localVue.use(Vuex)
   const vuetify = new Vuetify()
+  const store = new Vuex.Store({ ...blogStore })
 
+  jest.spyOn(Timeline, 'beforeCreate')
+  jest.spyOn(Timeline, 'created')
   const wrapper = mount(Timeline, {
     localVue,
     vuetify,
-    stubs: {
-      nuxt: true,
-      // Any other component that you want stubbed
+    store,
+    mocks: {
+      $colorMode: (param) => param,
     },
   })
   it('should have a timeline', () => {
-    // With jest we can create snapshot files of the HTML output
-
     const timeline = wrapper.findComponent(Timeline)
     expect(timeline.exists()).toBe(true)
   })
