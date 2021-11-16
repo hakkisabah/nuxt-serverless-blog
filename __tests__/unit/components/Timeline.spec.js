@@ -10,7 +10,7 @@ import Vuetify from 'vuetify'
 import Timeline from '@/components/Timeline'
 
 // Utilities
-import { createLocalVue, mount, shallowMount } from '@vue/test-utils'
+import { createLocalVue, mount } from '@vue/test-utils'
 import { describe, it, jest } from '@jest/globals'
 import * as blogStore from '~/store'
 
