@@ -21,6 +21,7 @@ const schema = new Schema(
 )
 schema.statics.saveUser = async function (payload) {
   const user = new this(payload)
+  // eslint-disable-next-line no-useless-catch
   try {
     return await user.save()
   } catch (e) {
@@ -29,6 +30,7 @@ schema.statics.saveUser = async function (payload) {
 }
 
 schema.statics.findUser = async function (payload) {
+  // eslint-disable-next-line no-useless-catch
   try {
     return await mongoose.model('User', schema).findOne(payload)
   } catch (e) {

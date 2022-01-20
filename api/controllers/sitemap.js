@@ -1,9 +1,6 @@
 const { getBlogs } = require('./blogs')
 const getsiteMap = async () => {
   const blogs = await getBlogs()
-  const sortedBlogsByDate = blogs.sort(
-    (a, b) => new Date(b.updatedAt) - new Date(a.updatedAt) // (b - a) sorted newest post place to first for month
-  )
   const sitemaps = blogs.reduce((groups, blog) => {
     const yearOfDate = new Date(blog.createdAt).getFullYear() // its have to createdAt property,
     // after create sitemap index sorted with year for a good sorting, use required updatedAt property all other soring

@@ -11,7 +11,7 @@ import blogIndex from '@/pages/blog/index'
 
 // Utilities
 import { createLocalVue, mount } from '@vue/test-utils'
-import { describe, it, jest } from '@jest/globals'
+import { describe, it } from '@jest/globals'
 import * as blogStore from '~/store'
 
 describe('index.vue', () => {

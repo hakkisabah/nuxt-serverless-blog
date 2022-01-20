@@ -5,6 +5,7 @@ const logInfo = {
   file: 'startup/db.js',
 }
 
+// eslint-disable-next-line no-useless-catch
 try {
   mongoose.connect(`${process.env.DB_LOCAL_URL}${process.env.DB_COLLECTION}`, {
     useNewUrlParser: true,

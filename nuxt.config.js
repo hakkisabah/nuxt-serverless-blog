@@ -1,5 +1,6 @@
 // eslint-disable-next-line nuxt/no-cjs-in-config
 const { sitemap } = require('./utils/sitemap')
+// eslint-disable-next-line import/order
 const colors = require('vuetify/es5/util/colors').default
 // eslint-disable-next-line nuxt/no-cjs-in-config
 module.exports = {

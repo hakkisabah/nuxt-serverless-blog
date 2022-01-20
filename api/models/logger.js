@@ -13,6 +13,7 @@ const LogSchema = new Schema(
 
 LogSchema.statics.saveLog = async function (payload) {
   const log = new this(payload)
+  // eslint-disable-next-line no-useless-catch
   try {
     return await log.save()
   } catch (e) {
