@@ -15,6 +15,7 @@ functions:
       - http: ANY /{proxy+}
     environment:
       domain: ${self:custom.secrets.domain}
+      GOOGLE_ANALYTICS_ID: ${self:custom.secrets.GOOGLE_ANALYTICS_ID}
       TITLE_TEMPLATE: ${self:custom.secrets.TITLE_TEMPLATE}
       TITLE: ${self:custom.secrets.TITLE}
 custom:
