@@ -1,0 +1,87 @@
+{
+  "path": "/sitemap.xml",
+  "hostname": "http://localhost:3000",
+  "exclude": [
+    "**/admin/**"
+  ],
+  "sitemaps": [
+    {
+      "path": "/2019.xml",
+      "sitemaps": [
+        {
+          "path": "2019/2.xml",
+          "routes": [
+            "different-blog-here"
+          ],
+          "lastmod": "2019-02-10T14:16:22+0300",
+          "exclude": [
+            "**/**"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/2020.xml",
+      "sitemaps": [
+        {
+          "path": "2020/4.xml",
+          "routes": [
+            "my-blog-here"
+          ],
+          "lastmod": "2020-04-10T14:16:22+0300",
+          "exclude": [
+            "**/**"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/2021.xml",
+      "sitemaps": [
+        {
+          "path": "2021/5.xml",
+          "routes": [
+            "my-blog-here"
+          ],
+          "lastmod": "2021-05-10T14:16:22+0300",
+          "exclude": [
+            "**/**"
+          ]
+        },
+        {
+          "path": "2021/4.xml",
+          "routes": [
+            "blog/different-blog-here",
+            "blog/my-blog-here",
+            "blog/different-blog-here",
+            "blog/my-blog-here"
+          ],
+          "lastmod": "2021-04-10T14:16:22+0300",
+          "exclude": [
+            "**/**"
+          ]
+        },
+        {
+          "path": "2021/3.xml",
+          "routes": [
+            "my-blog-here"
+          ],
+          "lastmod": "2021-03-10T14:16:22+0300",
+          "exclude": [
+            "**/**"
+          ]
+        },
+        {
+          "path": "2021/1.xml",
+          "routes": [
+            "my-blog-here"
+          ],
+          "lastmod": "2021-01-10T14:16:22+0300",
+          "exclude": [
+            "**/**"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+[
+  {
+    "name": "classification",
+    "content": "Personel , Blog"
+  },
+  {
+    "name": "rating",
+    "content": "All"
+  },
+  {
+    "name": "language",
+    "content": "Turkish,English"
+  },
+  {
+    "name": "owner",
+    "content": "Hakkı SABAH"
+  },
+  {
+    "name": "creator",
+    "content": "hakkisabah@hotmail.com"
+  },
+  {
+    "name": "generator",
+    "content": "hakkisabah@hotmail.com"
+  },
+  {
+    "name": "distribution",
+    "content": "global"
+  },
+  {
+    "property": "og:type",
+    "content": "blog"
+  },
+  {
+    "name": "twitter:card",
+    "content": "summary_large_image"
+  },
+  {
+    "name": "twitter:site",
+    "content": "@hakkisabah"
+  }
+
+]
