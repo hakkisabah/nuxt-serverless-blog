@@ -7,24 +7,10 @@
 </template>
 
 <script>
+import SLUG_DATA_AND_SEO from '~/plugins/slug-head-mixin.js'
 export default {
-  // eslint-disable-next-line require-await
-  async asyncData({ params }) {
-    const blogslug = params.blogslug // When calling /abc the slug will be "abc"
-    // eslint-disable-next-line nuxt/no-this-in-fetch-data
-    return { blogslug }
-  },
-  data() {
-    return {
-      blogData: Object,
-    }
-  },
-  async created() {
-    this.blogData = await this.$store.dispatch('getBlog', this.blogslug)
-    if (!this.blogData) {
-      return this.$router.push('/error')
-    }
-  },
+  name: 'Blogslug',
+  mixins: [SLUG_DATA_AND_SEO],
 }
 </script>
 
