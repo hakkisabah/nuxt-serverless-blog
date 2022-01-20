@@ -30,23 +30,9 @@
 </template>
 
 <script>
+import INDEX_DATA_AND_SEO from '~/plugins/index-head-mixin.js'
 export default {
   name: 'Timeline',
-  data() {
-    return {
-      blogs: [],
-    }
-  },
-  beforeCreate() {
-    this.$store.dispatch('nuxtServerInit')
-  },
-  created() {
-    const limit = this.$store.getters.getTimeLineLimit
-    this.blogs = this.$store.getters.getBlogs.filter((blog, index) => {
-      if (index < limit) {
-        return blog
-      }
-    })
-  },
+  mixins: [INDEX_DATA_AND_SEO],
 }
 </script>

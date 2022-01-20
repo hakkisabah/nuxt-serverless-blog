@@ -14,12 +14,8 @@
         :href="getSocialLink(social.icon.split('-')[1])"
         fab
         icon
-        :large="
-          $vuetify.breakpoint.width < 600 || $vuetify.breakpoint.width > 1024
-        "
-        :x-small="
-          $vuetify.breakpoint.width > 599 && $vuetify.breakpoint.width < 769
-        "
+        :large="$vuetify.breakpoint.width < 600 || !isSmall"
+        :x-small="isSmall"
       >
         <v-icon>{{ social.icon }}</v-icon>
       </v-btn>
@@ -48,6 +44,18 @@ export default {
         },
       ],
     }
+  },
+  computed: {
+    isSmall() {
+      return (
+        (this.$vuetify.breakpoint.width > 599 &&
+          this.$vuetify.breakpoint.width < 769) ||
+        (this.$vuetify.breakpoint.width > 767 &&
+          this.$vuetify.breakpoint.height < 1080) ||
+        (this.$vuetify.breakpoint.width > 1041 &&
+          this.$vuetify.breakpoint.height < 1395)
+      )
+    },
   },
   methods: {
     getSocialLink(platformname) {
