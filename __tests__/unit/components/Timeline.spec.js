@@ -20,8 +20,6 @@ describe('Timeline.vue', () => {
   const vuetify = new Vuetify()
   const store = new Vuex.Store({ ...blogStore })
 
-  jest.spyOn(Timeline, 'beforeCreate')
-  jest.spyOn(Timeline, 'created')
   const wrapper = mount(Timeline, {
     localVue,
     vuetify,

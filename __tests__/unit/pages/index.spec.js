@@ -19,7 +19,7 @@ describe('index.vue', () => {
   const wrapper = shallowMount(indexPage, {
     localVue,
     vuetify,
-    mocks: { $colorMode: (param) => param },
+    mocks: { $t: (msg) => msg, $colorMode: (param) => param },
     components: {
       LazyTimeline,
     },

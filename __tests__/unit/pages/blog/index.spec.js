@@ -20,12 +20,12 @@ describe('index.vue', () => {
   const vuetify = new Vuetify()
   const store = new Vuex.Store({ ...blogStore })
 
-  jest.spyOn(blogIndex, 'created')
   const wrapper = mount(blogIndex, {
     localVue,
     vuetify,
     store,
     mocks: {
+      $t: (msg) => msg,
       navigationLinkResolver: (param) => param,
       blogs: [],
     },

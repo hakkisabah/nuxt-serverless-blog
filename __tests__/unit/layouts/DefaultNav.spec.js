@@ -8,16 +8,24 @@ import DefaultNav from '@/layouts/partials/DefaultNav'
 
 // Utilities
 import { createLocalVue, mount, RouterLinkStub } from '@vue/test-utils'
-import { describe, it } from '@jest/globals'
+import { describe, it, jest } from '@jest/globals'
+
+// Router
+import VueRouter from 'vue-router'
 
 const menuNames = require('@/lang/jsons/links.json').menuNames
 
 describe('DefaultNav.vue', () => {
   const localVue = createLocalVue()
+  localVue.use(VueRouter)
+  const router = new VueRouter()
   const vuetify = new Vuetify()
+
+  jest.spyOn(DefaultNav, 'created')
   const wrapper = mount(DefaultNav, {
     localVue,
     vuetify,
+    router,
     mocks: {
       $t: (msg) => msg,
       $i18n: (locale) => locale,
