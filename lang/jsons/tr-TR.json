@@ -12,7 +12,23 @@
       "otherError": "Bir hata oluştu"
     }
   },
+  "head": {
+    "titles": {
+      "home": {
+        "title": "Anasayfa",
+        "titleTemplate": "Akış"
+      },
+      "blog": {
+        "title": "Benim bloğum",
+        "titleTemplate": "Blog"
+      },
+      "portfolio": {
+        "title": "Portfolyom",
+        "titleTemplate": "Portfolyo"
+      }
+    }
+  },
   "linkNames": {
-    "home": "Ana Sayfa"
+    "home": "Anasayfa"
   }
 }

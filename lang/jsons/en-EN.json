@@ -12,6 +12,22 @@
       "otherError": "An error occurred"
     }
   },
+  "head": {
+    "titles": {
+      "home": {
+        "title": "Home Page",
+        "titleTemplate": "Timeline"
+      },
+      "blog": {
+        "title": "My blog",
+        "titleTemplate": "Blogs"
+      },
+      "portfolio": {
+        "title": "My portfolio",
+        "titleTemplate": "Portfolio"
+      }
+    }
+  },
   "linkNames": {
     "home": "Home Page"
   }
