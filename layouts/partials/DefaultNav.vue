@@ -73,7 +73,7 @@ export default {
   },
   computed: {
     title() {
-      return process.env.TITLE
+      return process.env.NAV_TITLE
     },
   },
   watch: {
@@ -91,6 +91,12 @@ export default {
     search(val) {
       val && val !== this.select && this.querySelections(val)
     },
+  },
+  created() {
+    // Check navigation blog text for back icon
+    if (this.$route.params.blogslug) {
+      this.backBlogIcon = true
+    }
   },
   methods: {
     toggleDarkMode() {
@@ -111,7 +117,7 @@ export default {
           return (e || '').toLowerCase().includes((v || '').toLowerCase())
         })
         this.loading = false
-      }, 500)
+      }, 100)
     },
   },
 }

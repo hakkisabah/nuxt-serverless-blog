@@ -1,30 +1,31 @@
 <template>
   <v-app id="myblog" :dark="$colorMode.preference === 'dark'">
-    <div v-if="isLoad">
-      <DefaultNav></DefaultNav>
-      <v-main>
-        <v-container fluid>
-          <v-row>
-            <DefaultLeft></DefaultLeft>
-            <DefaultCenter></DefaultCenter>
-            <DefaultRight></DefaultRight>
-          </v-row>
-        </v-container>
-      </v-main>
-    </div>
-    <Firstload v-if="!isLoad"></Firstload>
+    <DefaultNav></DefaultNav>
+    <v-main>
+      <v-container fluid>
+        <v-row>
+          <DefaultLeft></DefaultLeft>
+          <DefaultCenter></DefaultCenter>
+          <DefaultRight></DefaultRight>
+        </v-row>
+      </v-container>
+    </v-main>
+    <DefaultBottom></DefaultBottom>
+    <v-overlay :value="overlay">
+      <v-progress-circular indeterminate size="64"></v-progress-circular>
+    </v-overlay>
   </v-app>
 </template>
 
 <script>
-import Firstload from '~/components/Firstload'
 import DefaultLeft from '~/layouts/partials/DefaultLeft'
 import DefaultRight from '~/layouts/partials/DefaultRight'
 import DefaultCenter from '~/layouts/partials/DefaultCenter'
 import DefaultNav from '~/layouts/partials/DefaultNav'
+import DefaultBottom from '~/layouts/partials/DefaultBottom'
 export default {
   components: {
-    Firstload,
+    DefaultBottom,
     DefaultNav,
     DefaultCenter,
     DefaultRight,
@@ -32,16 +33,23 @@ export default {
   },
   data() {
     return {
-      isLoad: false,
+      overlay: true,
     }
   },
   async beforeMount() {
+    // await this.$store.dispatch('nuxtServerInit') // not required only test
     this.$vuetify.theme.dark =
       (await localStorage.getItem('nuxt-color-mode')) === 'dark'
-    this.isLoad = true
+    this.overlay = false
   },
   head() {
-    return this.$nuxtI18nHead({ addDirAttribute: true, addSeoAttributes: true })
+    // need required basic seo and html info.
+    return {
+      ...this.$nuxtI18nHead({
+        addDirAttribute: true,
+        addSeoAttributes: true,
+      }),
+    }
   },
 }
 </script>
