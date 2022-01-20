@@ -1,0 +1,11 @@
+node_modules
+
+#environment
+.env
+
+# Serverless directories
+.serverless
+secretenv.json
+
+# IDE / Editor
+.idea
