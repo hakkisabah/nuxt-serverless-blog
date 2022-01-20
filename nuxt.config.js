@@ -1,16 +1,13 @@
 // eslint-disable-next-line nuxt/no-cjs-in-config
+const { sitemap } = require('./utils/sitemap')
 const colors = require('vuetify/es5/util/colors').default
-
 // eslint-disable-next-line nuxt/no-cjs-in-config
 module.exports = {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - ' + process.env.TITLE_TEMPLATE,
-    title: process.env.TITLE,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -20,8 +17,13 @@ module.exports = {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    { src: '~/plugins/breakpoint.js' },
     { src: '~/plugins/i18n.js', ssr: true },
     { src: '~/plugins/linkresolver.js' },
+    { src: '~/plugins/jsonld.js' },
+    { src: '~/plugins/special-chars.js' },
+    { src: '~/plugins/dynamic-meta-creator.js' },
+    { src: '~/plugins/vue-google-analytics.js', mode: 'client' },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -41,28 +43,32 @@ module.exports = {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    'nuxt-i18n',
     '@nuxtjs/device',
+    [
+      'nuxt-i18n',
+      {
+        baseUrl: process.env.domain || 'http://localhost:3000',
+        locales: [
+          { code: 'tr', iso: 'tr-TR', file: 'tr-TR.json' },
+          { code: 'en', iso: 'en-EN', file: 'en-EN.json' },
+        ],
+        lazy: true,
+        langDir: 'lang/jsons/',
+        vueI18nLoader: true,
+        defaultLocale: 'en',
+        vueI18n: {
+          fallbackLocale: 'en',
+        },
+        detectBrowserLanguage: {
+          useCookie: false,
+        },
+        seo: false,
+      },
+    ],
+    ['@nuxtjs/sitemap', async () => await sitemap()],
   ],
   dotenv: {
     /* module options */
-  },
-  i18n: {
-    strategy: 'prefix_except_default',
-    locales: [
-      { code: 'tr', iso: 'tr-TR', file: 'tr-TR.json' },
-      { code: 'en', iso: 'en-EN', file: 'en-EN.json' },
-    ],
-    lazy: true,
-    langDir: 'lang/jsons/',
-    vueI18nLoader: true,
-    defaultLocale: 'en',
-    vueI18n: {
-      fallbackLocale: 'en',
-    },
-    detectBrowserLanguage: {
-      useCookie: false,
-    },
   },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -110,5 +116,5 @@ module.exports = {
   router: {
     base: `/`,
   },
-  dev: false,
+  dev: false, // must be false before deploy
 }
